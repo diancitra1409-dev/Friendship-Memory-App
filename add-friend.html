@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Add Friend - Friendship Memory
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="form-container">
+
+
+
+<h1>
+Add Friend 💙
+</h1>
+
+
+
+<div class="photo-section">
+
+
+<label>
+Friend Photo
+</label>
+
+
+<input
+id="photo"
+type="file"
+accept="image/*">
+
+
+
+<img 
+id="preview-photo"
+class="preview-photo"
+style="display:none;">
+
+
+
+</div>
+
+
+
+
+
+
+<label>
+Friend Name
+</label>
+
+
+<input
+
+id="name"
+
+type="text"
+
+placeholder="Friend Name"
+
+required>
+
+
+
+
+<label>
+Birthday
+</label>
+
+
+<input
+
+id="birthday"
+
+type="date"
+
+required>
+
+
+
+
+
+
+<label>
+Favorite Food
+</label>
+
+
+<input
+
+id="food"
+
+type="text"
+
+placeholder="Favorite Food"
+
+required>
+
+
+
+
+
+
+<label>
+Hobby
+</label>
+
+
+<input
+
+id="hobby"
+
+type="text"
+
+placeholder="Hobby"
+
+required>
+
+
+
+
+
+
+<label>
+Memory
+</label>
+
+
+<textarea
+
+id="memory"
+
+placeholder="Your favorite memory together"
+
+required>
+
+</textarea>
+
+
+
+
+
+
+
+<button id="save-friend">
+
+Save Friend 💙
+
+</button>
+
+
+
+
+
+<a href="home.html" class="back-btn">
+
+← Back
+
+</a>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script type="module" src="script.js"></script>
+
+
+
+
+
+
+<script>
+
+
+// preview foto
+
+
+const photoInput =
+document.getElementById("photo");
+
+
+const preview =
+document.getElementById("preview-photo");
+
+
+
+
+photoInput.addEventListener("change",()=>{
+
+
+const file =
+photoInput.files[0];
+
+
+
+if(file){
+
+
+preview.src =
+URL.createObjectURL(file);
+
+
+preview.style.display =
+"block";
+
+
+}
+
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+
+</html>
